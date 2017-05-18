@@ -1,6 +1,7 @@
 package com.androidwanga.serenitynanian.serenityproject;
 
 import android.os.Build;
+import android.support.design.widget.AppBarLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.DividerItemDecoration;
@@ -21,6 +22,7 @@ public class CollapsingToolbarLayoutActivity extends AppCompatActivity {
 
     private Toolbar mToolbar ;
     private RecyclerView mRecycler ;
+    private AppBarLayout mAppBarLayout ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +50,21 @@ public class CollapsingToolbarLayoutActivity extends AppCompatActivity {
         mRecycler.setAdapter(adapter);
 
         handleData(adapter);
+
+        mAppBarLayout = (AppBarLayout) findViewById(R.id.appbarlayout);
+
+        /**
+         * 监听appBarLayout的折叠和展开状态，在初始化时就会调用一次
+         */
+        mAppBarLayout.addOnOffsetChangedListener(new AppBarLayout.OnOffsetChangedListener() {
+            @Override
+            public void onOffsetChanged(AppBarLayout appBarLayout, int verticalOffset) {
+                //appBarLayout.getHeight()   appbarlayout的总高度
+                //appBarLayout.getTotalScrollRange()  appbar能够滚动的高度
+                //verticalOffset 垂直的滚动距离，往上滚是负值 初始化时为0
+                System.out.println("appBarheight="+appBarLayout.getHeight()+",getTotalScrollRange = [" + appBarLayout.getTotalScrollRange() + "], verticalOffset = [" + verticalOffset + "]");
+            }
+        });
 
     }
 

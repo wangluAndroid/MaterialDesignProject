@@ -8,6 +8,7 @@
 
 
     <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbarlayout"
         android:layout_width="match_parent"
         android:fitsSystemWindows="true"
         android:layout_height="200dp">
@@ -21,7 +22,7 @@
             app:expandedTitleTextAppearance="@style/CollapsingToolbarLayoutTextTheme"
             app:contentScrim="@color/colorPrimary"
             app:expandedTitleMarginStart="10dp"
-            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap"
+            app:layout_scrollFlags="scroll"
             app:scrimAnimationDuration="1000"
             app:titleEnabled="true"
             app:title="列表展示">
