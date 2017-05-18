@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.androidwanga.serenitynanian.serenityproject.BottomSheetDialogActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:layout_width="match_parent"
+        app:title="bottomSheetDialog"
+        app:navigationIcon="@mipmap/ic_launcher_round"
+        app:titleTextColor="@color/colorAccent"
+        android:background="@color/colorPrimary"
+        android:layout_height="?attr/actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:gravity="right"
+            android:layout_marginRight="5dp"
+            android:textColor="#fff"
+            android:text="dialog1"
+
+            android:layout_height="wrap_content" />
+
+    </android.support.v7.widget.Toolbar>
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:text="bottomSheetDialog"
+        android:layout_height="wrap_content" />
+
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/button2"
+        android:text="shareDialog"
+        android:layout_height="wrap_content" />
+</LinearLayout>

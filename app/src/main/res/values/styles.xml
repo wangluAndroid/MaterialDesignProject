@@ -1,0 +1,39 @@
+<resources>
+
+    <!--&lt;!&ndash; Base application theme. &ndash;&gt;-->
+    <!--<style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">-->
+        <!--&lt;!&ndash; Customize your theme here. &ndash;&gt;-->
+        <!--<item name="colorPrimary">@color/colorPrimary</item>-->
+        <!--<item name="colorPrimaryDark">@color/colorPrimaryDark</item>-->
+        <!--<item name="colorAccent">@color/colorAccent</item>-->
+    <!--</style>-->
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolBarTheme" parent="AlertDialog.AppCompat.Light">
+        <!--设置toolbar溢出菜单的文字颜色-->
+        <item name="android:textColor">@color/colorAccent</item>
+        <!--设置toolbar溢出菜单的文字大小-->
+        <item name="android:textSize">20sp</item>
+        <!--设置显示在toolbar上菜单文字的颜色-->
+        <item name="actionMenuTextColor">#FFFFFF</item>
+        <!--更换toolbar overFlow menu icon-->
+        <item name="android:actionOverflowButtonStyle">@style/OverflowIcon</item>
+    </style>
+
+    <style name="OverflowIcon" parent="Widget.AppCompat.ActionBar.Solid">
+        <item name="android:src">@mipmap/ic_launcher_round</item>
+    </style>
+
+    <style name="CollapsingToolbarLayoutTextTheme" parent="AppTheme">
+        <item name="android:textColor">#fff</item>
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

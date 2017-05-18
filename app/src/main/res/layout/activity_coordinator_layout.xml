@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidwanga.serenitynanian.serenityproject.CoordinatorLayoutActivity">
+
+
+    <android.support.design.widget.AppBarLayout
+        android:elevation="0dp"
+        android:background="#fff"
+        android:backgroundTint="#fff"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <com.bigkoo.convenientbanner.ConvenientBanner
+            app:layout_scrollFlags="scroll"
+            android:id="@+id/convenientBanner"
+            android:layout_width="match_parent"
+            app:canLoop="true"
+            android:layout_height="150dp"/>
+
+        <HorizontalScrollView
+            app:layout_scrollFlags="scroll"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:scrollbars="none"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="130dp"
+                    android:text="小说精选"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:background="@drawable/label_shape1"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="130dp"
+                    android:text="高清电影"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:background="@drawable/label_shape2"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:layout_marginRight="10dp"
+                    android:layout_width="130dp"
+                    android:text="美女商城"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:background="@drawable/label_shape3"
+                    android:layout_height="50dp" />
+                <TextView
+                    android:layout_width="130dp"
+                    android:text="吃货天堂"
+                    android:textSize="15sp"
+                    android:gravity="center"
+                    android:textColor="#fff"
+                    android:background="@drawable/label_shape4"
+                    android:layout_height="50dp" />
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <EditText
+            android:focusable="false"
+            app:layout_scrollFlags="scroll"
+            android:layout_width="match_parent"
+            android:layout_margin= "10dp"
+            android:textSize="18sp"
+            android:textColorHighlight="#999999"
+            android:background="@drawable/edittext_shape"
+            android:hint="搜索感兴趣的电影"
+            android:gravity="center"
+            android:layout_height="50dp" />
+
+
+    </android.support.design.widget.AppBarLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:id="@+id/recycler"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_height="wrap_content"/>
+
+</android.support.design.widget.CoordinatorLayout>
