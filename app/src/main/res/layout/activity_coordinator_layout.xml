@@ -72,9 +72,9 @@
             </LinearLayout>
         </HorizontalScrollView>
 
+        <!--在这里如果想让EditText滚动后在顶部悬浮的化，只需要不要设置app:layout_scrollFlags = "scroll"即可-->
         <EditText
             android:focusable="false"
-            app:layout_scrollFlags="scroll"
             android:layout_width="match_parent"
             android:layout_margin= "10dp"
             android:textSize="18sp"

@@ -1,33 +1,41 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent"
     android:gravity="center"
+    android:orientation="vertical"
     tools:context="com.androidwanga.serenitynanian.serenityproject.MainActivity">
 
 
     <Button
         android:id="@+id/but_toolbar"
         android:layout_width="300dp"
-        android:text="Toolbar示例"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="Toolbar示例" />
+
     <Button
         android:id="@+id/but_bottomsheetdialog"
         android:layout_width="300dp"
-        android:text="bottomSheetDialog示例"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:text="bottomSheetDialog示例" />
+
     <Button
         android:id="@+id/coordinatorLayout"
-        android:layout_width="200dp"
-        android:text="CoordinatorLayout"
-        android:layout_height="wrap_content" />
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="CoordinatorLayout" />
+
     <Button
         android:id="@+id/collapsingToolbarLayout"
-        android:layout_width="200dp"
-        android:text="CoordinatorLaout_CollapsingToolbarLayout"
-        android:layout_height="wrap_content" />
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="CoordinatorLaout_CollapsingToolbarLayout" />
+
+    <Button
+        android:id="@+id/swipedismissbehavior"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="SwipeDismissBehavior" />
 
 </LinearLayout>

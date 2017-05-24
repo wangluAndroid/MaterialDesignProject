@@ -13,6 +13,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mBottomSheetDialog ;
     private Button mCoordinatorLayout;
     private Button mCollapsingToolbarLayout ;
+    private Button mSwipeDismissBehavior ;
 
 
 
@@ -26,11 +27,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         mCoordinatorLayout = (Button) findViewById(R.id.coordinatorLayout);
         mCollapsingToolbarLayout = (Button) findViewById(R.id.collapsingToolbarLayout);
+        mSwipeDismissBehavior = (Button) findViewById(R.id.swipedismissbehavior);
 
         mToolbar.setOnClickListener(this);
         mBottomSheetDialog.setOnClickListener(this);
         mCoordinatorLayout.setOnClickListener(this);
         mCollapsingToolbarLayout.setOnClickListener(this);
+        mSwipeDismissBehavior.setOnClickListener(this);
 
 
     }
@@ -51,7 +54,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.collapsingToolbarLayout:
                 goToOtherActivity(CollapsingToolbarLayoutActivity.class);
                 break ;
-
+            case R.id.swipedismissbehavior:
+                goToOtherActivity(SwipeDismissBehaviorActivity.class);
+                break ;
         }
     }
 

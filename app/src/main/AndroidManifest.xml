@@ -19,7 +19,8 @@
         <activity android:name=".ToolbarActivity" />
         <activity android:name=".BottomSheetDialogActivity" />
         <activity android:name=".CoordinatorLayoutActivity" />
-        <activity android:name=".CollapsingToolbarLayoutActivity"></activity>
+        <activity android:name=".CollapsingToolbarLayoutActivity" />
+        <activity android:name=".SwipeDismissBehaviorActivity"></activity>
     </application>
 
 </manifest>
