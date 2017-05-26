@@ -27,7 +27,18 @@
 
     </android.support.v7.widget.Toolbar>
 
+    <Button
+        android:id="@+id/button3"
+        android:text="bottomDialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
 
+    <Button
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:id="@+id/button4"
+        android:text="bottomDialogFragment"
+        android:layout_height="wrap_content" />
     <Button
         android:id="@+id/button"
         android:layout_width="match_parent"
@@ -40,4 +51,5 @@
         android:id="@+id/button2"
         android:text="shareDialog"
         android:layout_height="wrap_content" />
+
 </LinearLayout>

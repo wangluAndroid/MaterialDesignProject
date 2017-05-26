@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidwanga.serenitynanian.serenityproject.BottomDialogActivity">
+
+    <!--底部菜单布局-->
+
+    <!--LinearLayout底部布局菜单-->
+    <!--<include layout="@layout/layout_bottom_sheet_linear" />-->
+
+    <!--RecyclerView底部布局菜单-->
+    <include layout="@layout/layout_bottom_dialog_recycler"/>
+
+
+</android.support.design.widget.CoordinatorLayout>

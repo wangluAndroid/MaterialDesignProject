@@ -20,7 +20,11 @@
         <activity android:name=".BottomSheetDialogActivity" />
         <activity android:name=".CoordinatorLayoutActivity" />
         <activity android:name=".CollapsingToolbarLayoutActivity" />
-        <activity android:name=".SwipeDismissBehaviorActivity"></activity>
+        <activity android:name=".SwipeDismissBehaviorActivity" />
+        <activity android:name=".TextInputActivity" />
+        <activity android:name=".SnackBarActivity" />
+        <activity android:name=".BottomDialogActivity" />
+        <activity android:name=".BottomDialogFragmentActivity"></activity>
     </application>
 
 </manifest>

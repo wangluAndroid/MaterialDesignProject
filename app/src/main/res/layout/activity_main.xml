@@ -38,4 +38,15 @@
         android:layout_height="wrap_content"
         android:text="SwipeDismissBehavior" />
 
+    <Button
+        android:id="@+id/textinputlayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="TextInputLayout" />
+
+    <Button
+        android:id="@+id/snackbar"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Snackbar" />
 </LinearLayout>

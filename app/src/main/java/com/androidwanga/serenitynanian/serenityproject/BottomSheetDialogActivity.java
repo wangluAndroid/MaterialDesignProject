@@ -1,5 +1,6 @@
 package com.androidwanga.serenitynanian.serenityproject;
 
+import android.content.Intent;
 import android.support.annotation.NonNull;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.design.widget.BottomSheetDialog;
@@ -26,17 +27,35 @@ import java.util.List;
 
 public class BottomSheetDialogActivity extends AppCompatActivity {
 
-    private Toolbar mToolbar ;
-
     private Button mBotton ;
     private Button  mShareDialog ;
     private BottomSheetDialog bottomSheetDialog;
+    private Button mBottomDialog ;
+    private Button mBottomDialogFragment ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bottom_sheet_dialog);
+        //bottomDialog
+        mBottomDialog = (Button) findViewById(R.id.button3);
+        mBottomDialog.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomDialog();
+            }
+        });
 
+        //bottomDialogFragment
+        mBottomDialogFragment = (Button) findViewById(R.id.button4);
+        mBottomDialogFragment.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                bottomDialogFragment();
+            }
+        });
+
+        //bottomSheetDialg动态布局
         mBotton = (Button) findViewById(R.id.button);
         mBotton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -45,6 +64,7 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
             }
         });
 
+        //bottomSheetDialg固定布局
         mShareDialog = (Button) findViewById(R.id.button2);
         mShareDialog.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -55,6 +75,28 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
 
     }
 
+    /**
+     * bottomDialogFragment的使用
+     */
+    private void bottomDialogFragment() {
+        Intent intent = new Intent(this, BottomDialogFragmentActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * bottomDialog
+     *bottomDialog依赖于CoordinatorLayout布局和behavior
+     * 底部菜单必须作为CoordinatorLayout的子View，并且需要设置
+     * app:layout_behavior = "@string/bottom_sheet_behavior"
+     */
+    private void bottomDialog() {
+        Intent intent = new Intent(this, BottomDialogActivity.class);
+        startActivity(intent);
+    }
+
+    /**
+     * bottomSheetDialg固定布局
+     */
     private void showSharedDialog() {
 
         if (bottomSheetDialog == null) {
@@ -66,8 +108,12 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
             bottomSheetDialog.setContentView(view);
             bottomSheetDialog.show();
 
-            //以下设置是为了解决：下滑隐藏dialog后，再次调用show方法显示时，不能弹出Dialog----在真机测试时不写下面的方法也未发现问题
+            //以下设置是为了解决：下滑隐藏dialog后，下次再次调用show方法显示时（没有重新new的情况下），不能弹出Dialog
+            // 原因是因为在BottomSheetDialog源码中，关闭dialog是依赖BottomSheetBehavior的，
+            // 当下滑隐藏时，BottomSheet的z状态为STATE_HIDDEN,并同时调用dialog的dismiss,下此再调用show方法时，
+            // 是无法将一个状态为HIDDEN的布局显示的----在真机测试时不写下面的方法也未发现问题
             View delegateView = bottomSheetDialog.getDelegate().findViewById(android.support.design.R.id.design_bottom_sheet);
+            //获得与之关联的BottomSheetBehavior,重新设置监听，在dimiss的时候，重新设置Behavior的状态；
             final BottomSheetBehavior<View> sheetBehavior = BottomSheetBehavior.from(delegateView);
             sheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
                 //在下滑隐藏结束时才会触发
@@ -89,6 +135,9 @@ public class BottomSheetDialogActivity extends AppCompatActivity {
         }
     }
 
+    /**
+     * bottomSheetDialog动态布局
+     */
     private void showBottomDialog() {
 
         BottomSheetDialog bottomSheetDialog = new BottomSheetDialog(this);
