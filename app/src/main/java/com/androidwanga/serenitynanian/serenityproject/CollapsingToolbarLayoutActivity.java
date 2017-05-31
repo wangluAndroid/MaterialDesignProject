@@ -62,6 +62,11 @@ public class CollapsingToolbarLayoutActivity extends AppCompatActivity {
                 //appBarLayout.getHeight()   appbarlayout的总高度
                 //appBarLayout.getTotalScrollRange()  appbar能够滚动的高度
                 //verticalOffset 垂直的滚动距离，往上滚是负值 初始化时为0
+                if (Math.abs(verticalOffset) >= appBarLayout.getTotalScrollRange()) {
+                    //往上滚动-----直到隐藏appbar
+                }else{
+
+                }
                 System.out.println("appBarheight="+appBarLayout.getHeight()+",getTotalScrollRange = [" + appBarLayout.getTotalScrollRange() + "], verticalOffset = [" + verticalOffset + "]");
             }
         });

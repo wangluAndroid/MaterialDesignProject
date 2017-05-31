@@ -1,5 +1,6 @@
 package com.androidwanga.serenitynanian.serenityproject;
 
+import android.support.design.widget.TextInputEditText;
 import android.support.design.widget.TextInputLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -15,7 +16,7 @@ public class TextInputActivity extends AppCompatActivity {
     private TextInputLayout mPasswordTextInputLayout;
 
     private EditText mUserNameEditText ;
-    private EditText mPasswordEditText ;
+    private TextInputEditText mPasswordEditText ;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,10 +28,10 @@ public class TextInputActivity extends AppCompatActivity {
         mPasswordTextInputLayout = (TextInputLayout) findViewById(R.id.password_inputlayout);
 
         mUserNameEditText = (EditText) findViewById(R.id.et_username);
-        mPasswordEditText = (EditText) findViewById(R.id.et_password);
+        mPasswordEditText = (TextInputEditText) findViewById(R.id.et_password);
 
-        mPasswordTextInputLayout.setPasswordVisibilityToggleEnabled(true);
-        mPasswordTextInputLayout.setPasswordVisibilityToggleDrawable(R.mipmap.ic_launcher_round);
+//        mPasswordTextInputLayout.setPasswordVisibilityToggleEnabled(true);
+//        mPasswordTextInputLayout.setPasswordVisibilityToggleDrawable(R.mipmap.ic_launcher_round);
 
         mUserNameTextInputLayout.setCounterEnabled(true);
         mUserNameTextInputLayout.setCounterMaxLength(MAX_LENGTH);

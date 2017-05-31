@@ -16,6 +16,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button mSwipeDismissBehavior ;
     private Button mTextInputLayout ;
     private Button mSnackbar ;
+    private Button mBehavior ;
+    private Button mFloatingActionButton ;
+    private Button mCardView ;
+    private Button mTabLayout ;
 
 
     @Override
@@ -31,6 +35,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSwipeDismissBehavior = (Button) findViewById(R.id.swipedismissbehavior);
         mTextInputLayout = (Button) findViewById(R.id.textinputlayout);
         mSnackbar = (Button) findViewById(R.id.snackbar);
+        mBehavior = (Button) findViewById(R.id.behavior);
+        mFloatingActionButton = (Button) findViewById(R.id.floatingactionbutton);
+        mCardView = (Button) findViewById(R.id.cardview);
+        mTabLayout = (Button) findViewById(R.id.tablayout);
 
         mToolbar.setOnClickListener(this);
         mBottomSheetDialog.setOnClickListener(this);
@@ -39,6 +47,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mSwipeDismissBehavior.setOnClickListener(this);
         mTextInputLayout.setOnClickListener(this);
         mSnackbar.setOnClickListener(this);
+        mBehavior.setOnClickListener(this);
+        mFloatingActionButton.setOnClickListener(this);
+        mCardView.setOnClickListener(this);
+        mTabLayout.setOnClickListener(this);
 
     }
 
@@ -67,6 +79,18 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.snackbar:
                 goToOtherActivity(SnackBarActivity.class);
                 break;
+            case R.id.behavior:
+                goToOtherActivity(BehaviorActivity.class);
+                break ;
+            case R.id.floatingactionbutton:
+                goToOtherActivity(FloatActionButtonActivity.class);
+                break;
+            case R.id.cardview:
+                goToOtherActivity(CardViewActivity.class);
+                break ;
+            case R.id.tablayout:
+                goToOtherActivity(TabLayoutActivity.class);
+                break ;
         }
     }
 

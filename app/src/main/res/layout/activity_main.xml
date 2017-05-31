@@ -27,6 +27,12 @@
         android:text="CoordinatorLayout" />
 
     <Button
+        android:id="@+id/floatingactionbutton"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="FAB" />
+
+    <Button
         android:id="@+id/collapsingToolbarLayout"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
@@ -49,4 +55,20 @@
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:text="Snackbar" />
+    <Button
+        android:id="@+id/behavior"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="Behavior" />
+    <Button
+        android:id="@+id/cardview"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="CardView" />
+    <Button
+        android:id="@+id/tablayout"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:text="TabLayout" />
+
 </LinearLayout>

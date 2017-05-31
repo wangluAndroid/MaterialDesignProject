@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.androidwanga.serenitynanian.serenityproject.TabLayoutActivity">
+
+    <android.support.design.widget.TabLayout
+        app:tabIndicatorColor="@color/colorPrimaryDark"
+        app:tabIndicatorHeight="5dp"
+        app:tabMode="scrollable"
+        app:tabGravity="center"
+        app:tabMinWidth="100dp"
+        app:tabMaxWidth="200dp"
+        app:tabTextColor="@color/colorAccent"
+        app:tabBackground="@android:color/holo_purple"
+        app:tabTextAppearance="@style/CustomTabLayoutStyle"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        android:id="@+id/ac_tablayout"
+        android:layout_width="match_parent"
+        android:layout_height="80dp">
+
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:text="Tab1"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:text="Tab2"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:text="Tab3"-->
+            <!--android:layout_height="wrap_content" />-->
+        <!--<android.support.design.widget.TabItem-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:text="Tab4"-->
+            <!--android:layout_height="wrap_content" />-->
+
+    </android.support.design.widget.TabLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/tablayout_viewpager"
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></android.support.v4.view.ViewPager>
+
+</LinearLayout>

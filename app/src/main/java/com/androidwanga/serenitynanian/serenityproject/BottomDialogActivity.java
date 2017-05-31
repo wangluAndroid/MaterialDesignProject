@@ -35,24 +35,16 @@ public class BottomDialogActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        //---------------加载LinearLayout菜单布局-------------
+
         setContentView(R.layout.activity_bottom_dialog);
-//
-//        //通过id获得底部菜单布局的实例
-//        mBottomDialog = (LinearLayout) findViewById(R.id.bottomdialog);
-//        //从底部菜单中获得与之关联的BottomSheetBehavior
-//        behavior = BottomSheetBehavior.from(mBottomDialog);
 
-        //----------------加载RecyclerView布局----------------------
-        mRecyclerView = (RecyclerView) findViewById(R.id.bottom_dialog_recyclerview);
-        mRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
-        myRecyclerAdapter = new MyRecyclerViewAdapter();
-        handlerData();
-        mRecyclerView.setAdapter(myRecyclerAdapter);
+        //---------------加载LinearLayout菜单布局-------------
 
-        //监听底部菜单的状态变化
-        recyclerViewBottomSheetBehavior = BottomSheetBehavior.from(mRecyclerView);
-        recyclerViewBottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+        //通过id获得底部菜单布局的实例
+        mBottomDialog = (LinearLayout) findViewById(R.id.bottomdialog);
+        //从底部菜单中获得与之关联的BottomSheetBehavior
+        behavior = BottomSheetBehavior.from(mBottomDialog);
+        behavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
             public void onStateChanged(@NonNull View bottomSheet, int newState) {
                 System.out.println("bottomSheet = [" + bottomSheet + "], newState = [" + newState + "]");
@@ -63,6 +55,27 @@ public class BottomDialogActivity extends AppCompatActivity {
                 System.out.println("bottomSheet = [" + bottomSheet + "], slideOffset = [" + slideOffset + "]");
             }
         });
+
+        //----------------加载RecyclerView布局----------------------
+//        mRecyclerView = (RecyclerView) findViewById(R.id.bottom_dialog_recyclerview);
+//        mRecyclerView.setLayoutManager(new LinearLayoutManager(this,LinearLayoutManager.VERTICAL,false));
+//        myRecyclerAdapter = new MyRecyclerViewAdapter();
+//        handlerData();
+//        mRecyclerView.setAdapter(myRecyclerAdapter);
+//
+//        //监听底部菜单的状态变化
+//        recyclerViewBottomSheetBehavior = BottomSheetBehavior.from(mRecyclerView);
+//        recyclerViewBottomSheetBehavior.setBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+//            @Override
+//            public void onStateChanged(@NonNull View bottomSheet, int newState) {
+//                System.out.println("bottomSheet = [" + bottomSheet + "], newState = [" + newState + "]");
+//            }
+//
+//            @Override
+//            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+//                System.out.println("bottomSheet = [" + bottomSheet + "], slideOffset = [" + slideOffset + "]");
+//            }
+//        });
 
     }
 

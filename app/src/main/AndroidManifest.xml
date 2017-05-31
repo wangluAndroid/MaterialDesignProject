@@ -24,7 +24,11 @@
         <activity android:name=".TextInputActivity" />
         <activity android:name=".SnackBarActivity" />
         <activity android:name=".BottomDialogActivity" />
-        <activity android:name=".BottomDialogFragmentActivity"></activity>
+        <activity android:name=".BottomDialogFragmentActivity" />
+        <activity android:name=".BehaviorActivity" />
+        <activity android:name=".FloatActionButtonActivity" />
+        <activity android:name=".CardViewActivity" />
+        <activity android:name=".TabLayoutActivity"></activity>
     </application>
 
 </manifest>
